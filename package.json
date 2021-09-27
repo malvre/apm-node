@@ -1,0 +1,31 @@
+{
+  "name": "apm-node",
+  "version": "1.0.0",
+  "description": "Aplicação modelo de REST-API usando NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc && nodemon ./dist/src/server.js"
+  },
+  "author": "Marcelo Rezende",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.1.1",
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/node": "^16.10.1",
+    "nodemon": "^2.0.12",
+    "prisma": "^3.1.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
