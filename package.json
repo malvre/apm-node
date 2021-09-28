@@ -4,7 +4,7 @@
   "description": "Aplicação modelo de REST-API usando NodeJS",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc && nodemon ./dist/src/server.js"
+    "dev": "ts-node-dev ./src/server.ts"
   },
   "author": "Marcelo Rezende",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "nodemon": "^2.0.12",
     "prisma": "^3.1.1",
     "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.3"
   }
 }
