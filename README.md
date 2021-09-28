@@ -12,8 +12,6 @@ Aplicação modelo para uma API-REST em NodeJS, implementando autenticação via
 
 ![image info](./screenshots/arquitetura.png)
 
-express -> route -> controller -> service -> prisma
-
 ## Use cases implementados nesse template
 
 - Create user
