@@ -16,7 +16,7 @@ API REST para ser usada como base em BBF (Back-end For Front-end)
 - [ x ] Excluir usuário
   - [ x ] Somente admin
 - [ x ] Fazer login
-- [ ] Refresh token
+- [ x ] Refresh token
 
 ## Entidades
 

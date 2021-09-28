@@ -7,15 +7,15 @@ dotenv.config({
   path: process.env.NODE_ENV === 'test' ? '.env.testing' : '.env',
 })
 
-import { router as usersRouter } from './routes/usersRoute'
 import { router as authRouter } from './routes/authRoute'
+import { router as usersRouter } from './routes/usersRoute'
 
 const app = express()
 app.use(express.json())
 
 // routes
-app.use('/v1', usersRouter)
 app.use('/v1', authRouter)
+app.use('/v1', usersRouter)
 
 // catch errors
 app.use(handleErrors)
