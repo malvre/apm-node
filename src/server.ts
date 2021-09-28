@@ -11,8 +11,8 @@ import { router as authRouter } from './routes/authRoute'
 const app = express()
 app.use(express.json())
 
-app.use(usersRouter)
-app.use(authRouter)
+app.use('/v1', usersRouter)
+app.use('/v1', authRouter)
 
 // catch errors ////////////////////////////////////////////////////////////////////
 app.use(handleErrors)
