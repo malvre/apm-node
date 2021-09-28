@@ -4,9 +4,9 @@ Aplicação modelo para uma API-REST em NodeJS, implementando autenticação via
 
 ## Tecnologias utilizadas
 
-- ExpressJS
-- Prisma ORM
-- Banco de dados PostgreSQL
+- [ExpressJS](https://expressjs.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- Banco de dados [PostgreSQL](https://www.postgresql.org/) (mas pode usar qualquer um suportado pelo Prisma)
 
 ## Modelo arquitetural
 
