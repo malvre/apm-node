@@ -10,7 +10,7 @@ Aplicação modelo para uma API-REST em NodeJS, implementando autenticação via
 
 ## Modelo arquitetural
 
-![image info](./screenshots/arquitetura.png)
+![image info](./screenshots/architecture.png)
 
 ## Use cases implementados nesse template
 
