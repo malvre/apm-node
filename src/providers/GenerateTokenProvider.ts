@@ -1,5 +1,8 @@
 import { sign } from 'jsonwebtoken'
 
+/***
+ * Gera um token
+ */
 class GenerateTokenProvider {
   async execute(userId: string) {
     const secretKey = process.env.SECRET_KEY as string

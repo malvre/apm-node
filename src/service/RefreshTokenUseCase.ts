@@ -5,6 +5,7 @@ import { GenerateTokenProvider } from '../providers/GenerateTokenProvider'
 
 class RefreshTokenUseCase {
   async execute(refresh_token: string) {
+    // localiza refresh token
     const refreshToken = await client.refreshToken.findFirst({
       where: {
         id: refresh_token,
@@ -15,9 +16,11 @@ class RefreshTokenUseCase {
       throw new Error('Refresh token invalid')
     }
 
+    // gera novo token
     const generateTokenProvider = new GenerateTokenProvider()
     const token = await generateTokenProvider.execute(refreshToken.userId)
 
+    // verifica se token está expirado e cria novo token
     const refreshTokenExpired = dayjs().isAfter(dayjs.unix(refreshToken.expiresIn))
 
     if (refreshTokenExpired) {

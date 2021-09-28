@@ -9,7 +9,7 @@ interface IRequest {
 
 class CreateUserUseCase {
   async execute({ name, email, password }: IRequest) {
-    // verificar se usuário existe
+    // verifica se usuário já existe
     const userAlreadyExists = await client.user.findFirst({
       where: {
         email,

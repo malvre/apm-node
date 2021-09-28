@@ -10,7 +10,7 @@ interface IRequest {
 
 class AuthenticateUserUseCase {
   async execute({ email, password }: IRequest) {
-    // verificar se usuário existe
+    // verifica se usuário existe
     const userExists = await client.user.findFirst({
       where: {
         email,
@@ -21,25 +21,25 @@ class AuthenticateUserUseCase {
       throw new Error('User or password incorrect')
     }
 
-    // verificar se a senha está correta
+    // verifica se a senha está correta
     const passwordMatch = await compare(password, userExists.password)
 
     if (!passwordMatch) {
       throw new Error('User or password incorrect')
     }
 
-    // gerar token do usuário
+    // gera token do usuário
     const generateTokenProvider = new GenerateTokenProvider()
     const token = await generateTokenProvider.execute(userExists.id)
 
-    // apagar refresh token existente
+    // apaga refresh token existente
     await client.refreshToken.deleteMany({
       where: {
         userId: userExists.id,
       },
     })
 
-    // gerar refresh token
+    // gera refresh token
     const generateRefreshToken = new GenerateRefreshTokenProvider()
     const refreshToken = await generateRefreshToken.execute(userExists.id)
 
