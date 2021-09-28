@@ -11,7 +11,7 @@ import { UpdateUserController } from '../controllers/UpdateUserController'
 import { DeleteUserController } from '../controllers/DeleteUserController'
 
 router.get('/users', ensureAuthenticated, ListUsersController.handle)
-router.get('/users/:id', ensureAuthenticated, ensureAdmin, GetUserController.handle)
+router.get('/users/:id', ensureAuthenticated, GetUserController.handle)
 router.post('/users', ensureAuthenticated, ensureAdmin, CreateUserController.handle)
 router.put('/users/:id', ensureAuthenticated, ensureAdmin, UpdateUserController.handle)
 router.delete('/users/:id', ensureAuthenticated, ensureAdmin, DeleteUserController.handle)
