@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { GetUserUseCase } from '../service/GetUserUseCase'
+import { GetUserUseCase } from '../services/GetUserUseCase'
 
 class GetUserController {
   static async handle(req: Request, res: Response) {
