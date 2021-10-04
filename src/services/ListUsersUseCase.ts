@@ -16,4 +16,4 @@ class ListUsersUseCase {
   }
 }
 
-export default ListUsersUseCase
+export { ListUsersUseCase }
